@@ -1,0 +1,120 @@
+
+/* 
+Fonts that I thought would look good for our application.
+font-family: 'Markazi Text', serif;
+font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Istok Web', sans-serif;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Barlow Semi Condensed', sans-serif; */
+
+/*Alan added color using what was outlined here*/
+body{
+    background-color: #2699FB
+}
+
+.grid{
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #B6DCFC;
+    padding: 0px 40px 0px 40px;
+    border-radius: 25px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 5px 5px 5px #cbcbcb;
+}
+
+.grid h1 {
+    font-family: sans-serif;
+    background-color: #57636e;
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px 0px;
+    border-radius: 50px; 
+}
+
+.grid #question {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #5a6772;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+#btn0, #btn1, #btn2, #btn3 {
+    background-color: #778897;
+    width: 250px;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+}
+
+#score {
+    color: #2b2b2b;
+    text-align: center;
+    font-size: 35px;
+}
+
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #57636e;
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus{
+    outline: 0;
+}
+
+
+
+.dark-blue{
+    color:#2699FB
+}
+
+.light-blue{
+    color:#B6DCFC
+}
+
+h1 {
+    text-align: center;
+  }
+
+div {
+    text-align: center;
+  }
+
+/* Next and Previous Button Styling */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+.previous {
+    background-color: #778897;
+    color: white;
+}
+
+.next {
+    background-color: #778897;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
