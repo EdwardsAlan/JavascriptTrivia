@@ -40,16 +40,16 @@ function showScores() {
 }
 
 var questions = [
-    new Question("In JavaScript you cannot use what reserved words as variables, labels, or function names?",["Reserved Words", "Strings", "Data Types", "Number"], "Number"),
-    new Question("Which of the following is used for declaring variables in a function, but is block scoped?",["Null", "var", "const", "let"], "var"),
-    new Question("A variable declared outside a JavaScript function, becomes what?",["Local", "Global", "Invalid", "Number"], "Number"),
-    new Question("In JavaScript, a variable must be declared before it is used.",["True", "False"], "Number"),
-    new Question("JavaScript function parameters are delimited by:",["comma", "semicolon", "colon", "period"], "Number"),
-    new Question("Which of the following comparison checks for equal value and type?",["y = 1", "y == 1", "y === 1", "y <> 1"], "Number"),
-    new Question("Data  used to track different characteristics related to a user which stored in small text files on your computer are called:",["JSON", "XML", "Cache", "Cookies"], "Number"),
-    new Question("A built-in method used to convert a JavaScript object into a string.",["JSON.stringify()", "JSONify()", "Convert2JSON()", "JSON.Convert.Object()"], "Number"),
-    new Question("Which of the following is used to add an HTML element using JavaScript?",["document.createElement(element)", "document.appendChild(element)", "document.write(text)", "document.replaceChild(new, old)"], "Number"),
-    new Question("In JavaScript, which of the following is used to comment lines:",["/* and */", "//", "Data Types", "<!-- and  -->"], "*//")
+    new Question("In JavaScript you cannot use what reserved words as variables, labels, or function names?",["Reserved Words", "Strings", "Data Types", "Number"], "Reserved Words"),
+    new Question("Which of the following is used for declaring variables in a function, but is block scoped?",["Null", "var", "const", "let"], "let"),
+    new Question("A variable declared outside a JavaScript function, becomes what?",["Local", "Global", "Invalid", "Number"], "Global"),
+    new Question("In JavaScript, a variable must be declared before it is used.",["True", "False"], "False"),
+    new Question("JavaScript function parameters are delimited by:",["comma", "semicolon", "colon", "period"], "comma"),
+    new Question("Which of the following comparison checks for equal value and type?",["y = 1", "y == 1", "y === 1", "y <> 1"], "y === 1"),
+    new Question("Data  used to track different characteristics related to a user which stored in small text files on your computer are called:",["JSON", "XML", "Cache", "Cookies"], "Cookies"),
+    new Question("A built-in method used to convert a JavaScript object into a string.",["JSON.stringify()", "JSONify()", "Convert2JSON()", "JSON.Convert.Object()"], "JSON.stringify()"),
+    new Question("Which of the following is used to add an HTML element using JavaScript?",["document.createElement(element)", "document.appendChild(element)", "document.write(text)", "document.replaceChild(new, old)"], "document.appendChild(element)"),
+    new Question("In JavaScript, which of the following is used to comment lines:",["/* and */", "//", "Data Types", "<!-- and  -->"], "<!-- and  -->"),
 
 ];
 
