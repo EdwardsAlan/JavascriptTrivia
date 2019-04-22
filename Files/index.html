@@ -1,42 +1,95 @@
+<!--
+============================================
+; Title:  Javascript Trivia Quiz
+; Authors: Griselda Balmaceda (Project Lead, Overall Design & Logic)
+;          Don Cousar (Question/Answer & right Question Pane)
+;          Alan Edwards (Question Card Developer)
+; Date:   20 April 2019
+; Description: Tests Developers knowledge of JavaScript and rates results
+;===========================================
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
+
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript Quiz</title>
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    
+    <link rel="stylesheet" type="text/css" href="StyleFolder/style.css">
+    <link rel="stylesheet" type="text/css" href="StyleFolder/responsive.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Barlow+Semi+Condensed|Istok+Web|Markazi+Text|Playfair+Display+SC"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+        integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="grid">
-        <div id="quiz">
-            <h1>Javascript Trivia! </h1>
-            <hr style="margin-top:20px">
 
-            <p id="question"></p>
+    <div class="title ">Javascript Trivia</div>
 
-            <div class="buttons">
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
+    <div data-bind="visible:duringQuiz" class="float-right">
+        <ul data-bind="foreach:quiz">
+           <span data-bind="visible"></span> <li data-bind="click:showQuestion">Question <span data-bind="text:$index() + 1"></span></li>
+        </ul>
+    </div>
+    <!-- End Question List Column-->
+
+    <!--Card that contains question -->
+    <div data-bind="visible:duringQuiz">
+        <div class="questionCard card">
+            <div class="quiz">
+                <div class="text">
+                    <p data-bind="text:currentQuestion().question"></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Answers-->
+        <div data-bind="foreach:currentQuestion().choices" class="answerList">
+            <button data-bind="click:selected,css:{selected:select}" class="answerButton">
+                <p data-bind="text:choice"></p>
+            </button>
+        </div>
+
+        <!--footer-->
+        <div class="footer">
+            <div data-bind="visible:previous,click:previousQuestion" class="box float-left">
+                <div class="arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </div>
+            <div data-bind="visible:next,click:nextQuestion" class="box float-right">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <div data-bind="visible:submitButton,click:submit" class="box float-right">
+                <div class="arrow">
+                    <p>submit</p>
+                </div>
             </div>
 
-            <hr style="margin-top:50px">
-            <footer>
-                <p id="progress">Question x of y.</p>
-              
-            </footer>
         </div>
     </div>
-    
-    <script src="./quiz_controller.js"></script>
-    <script src="./questions.js"></script>
-    <script src="./app.js"></script>
-    <script src="responsive.css"></script>
-    
-    </form>
-    
+<div data-bind="visible:final">
+        <div class="card" style="margin-bottom: 20px;">
+         
+                    <div class="text">
+                        <h1>Congratulations you are a <span  data-bind="text:finalMessage"></span></h1>
+                        <span class="score" data-bind="text:percentage"></span>
+                        <p></p>
+                    </div>
+             
+            </div>
+        <div data-bind="foreach:quiz" class="answerList">
+                <div  data-bind="css:{highlight:inCorrect}" class="final-card" >
+                    <div class="question-text"><p data-bind="text:question"></p></div>
+                </button>
+            </div>
+
+</div>
+</div>
+    <script type="text/Javascript" src="knockout.js"></script>
+    <script type="text/JavaScript" src="main.js"></script>
 </body>
+
 </html>
